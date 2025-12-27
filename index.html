@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+ <form onsubmit="cal();return false">
+  <div>
+    <div><label for="obtained"></label>obtained marks    </div>
+     <input type="number" placeholder="enter your obtained marks" name="obtmarks" id="obtmarks">
+  </div>
+
+  <div>
+    <div>
+      <label for="totmarks">total marks</label>
+    </div>
+    <input type="number" placeholder="enter total number" name="totmarks" id="totmarks">
+  </div>
+
+    <button type="submit">submit</button>
+
+ 
+ </form>
+
+ <div id="result">
+
+ </div>
+
+
+
+
+  <script >
+       
+       function cal()
+       {
+        
+        const obtmarksRef=document.getElementById("obtmarks")
+        const  obtmarks=Number(obtmarksRef.value)
+     
+        let totmarksRef=document.getElementById("totmarks")
+        const totmarks=Number(totmarksRef.value)
+
+       let per=(obtmarks/totmarks)*100;
+       
+     resultDivRef=document.getElementById("result");
+        resultDivRef.textContent=per;
+       
+       }
+    
+   
+    
+
+ </script>
+</body>
+</html>
